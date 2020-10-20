@@ -1,0 +1,6 @@
+lograotate:
+  baseFilename: app
+  logDir: logs
+  logLevel: debug
+  maxRemainCnt: 30
+  rotateDays: 1
