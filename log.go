@@ -65,11 +65,11 @@ func loadConfig() *viper.Viper {
 func InitLog()  {
 	logConf := loadConfig()
 
-	logConf.SetDefault("lograotate.baseFilename", "../conf/log.yml")
-	logConf.SetDefault("lograotate.logDir", "logs")
-	logConf.SetDefault("lograotate.logLevel", "info")
-	logConf.SetDefault("lograotate.maxRemainCnt", 30)
-	logConf.SetDefault("lograotate.rotateDays", 1)
+	logConf.SetDefault("logrotate.baseFilename", "app")
+	logConf.SetDefault("logrotate.logDir", "logs")
+	logConf.SetDefault("logrotate.logLevel", "info")
+	logConf.SetDefault("logrotate.maxRemainCnt", 30)
+	logConf.SetDefault("logrotate.rotateDays", 1)
 
 	logDir := logConf.GetString("lograotate.logDir")
 	baseFilename := logConf.GetString("lograotate.baseFilename")
