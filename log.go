@@ -71,11 +71,11 @@ func InitLog()  {
 	logConf.SetDefault("logrotate.maxRemainCnt", 30)
 	logConf.SetDefault("logrotate.rotateDays", 1)
 
-	logDir := logConf.GetString("lograotate.logDir")
-	baseFilename := logConf.GetString("lograotate.baseFilename")
-	logLevel := logConf.GetString("lograotate.logLevel")
-	maxRemainCnt := logConf.GetUint("lograotate.maxRemainCnt")
-	rotateDays := logConf.GetUint("lograotate.rotateDays")
+	logDir := logConf.GetString("logrotate.logDir")
+	baseFilename := logConf.GetString("logrotate.baseFilename")
+	logLevel := logConf.GetString("logrotate.logLevel")
+	maxRemainCnt := logConf.GetUint("logrotate.maxRemainCnt")
+	rotateDays := logConf.GetUint("logrotate.rotateDays")
 
 	if logHook, err := newRotateLogHook(logDir, baseFilename, logLevel, rotateDays, maxRemainCnt); err != nil {
 		panic(fmt.Errorf("newRotateLogHook error: %v.\n", err))
